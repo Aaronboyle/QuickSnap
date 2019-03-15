@@ -8,6 +8,7 @@ namespace CardGames
     {
         public static void LoadResources()
         {
+            Console.WriteLine("something");
             Bitmap cards;
             cards = SwinGame.LoadBitmapNamed ("Cards", "Cards.png");
             SwinGame.BitmapSetCellDetails (cards, 82, 110, 13, 5, 53);      // set the cells in the bitmap to match the cards
@@ -26,6 +27,27 @@ namespace CardGames
 			{
 				myGame.FlipNextCard ();
 			}
+            if (myGame.IsStarted)
+            {
+                if(SwinGame.KeyTyped(KeyCode.vk_LSHIFT)|SwinGame.KeyTyped(KeyCode.vk_RSHIFT))
+                {
+                    //TODO:add sound effects
+                }
+                else if (SwinGame.KeyTyped(KeyCode.vk_LSHIFT))
+                {
+                    Console.WriteLine("shift pressed left ");
+                    myGame.PlayerHit(0);
+                }
+                else if (SwinGame.KeyTyped(KeyCode.vk_RSHIFT))
+                {
+                    Console.WriteLine("shift pressed right ");
+                    myGame.PlayerHit(1);
+                }
+
+                Console.WriteLine"blah blah");
+
+            
+            }
 		}
 
 		/// <summary>
