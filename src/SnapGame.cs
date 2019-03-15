@@ -6,6 +6,7 @@ namespace CardGames
 {
     public class SnapGame
     {
+		
         public static void LoadResources()
         {
             Bitmap cards;
@@ -27,7 +28,7 @@ namespace CardGames
 
 			if (SwinGame.KeyTyped (KeyCode.vk_SPACE))
 			{
-				myGame.FlipNextCard ();
+				myGame.Start();
 			}
 		}
 
