@@ -35,6 +35,7 @@ namespace CardGames
 		/// Draws the game to the Window.
 		/// </summary>
 		/// <param name="myGame">The details of the game -- mostly top card and scores.</param>
+		//function
 		private static void DrawGame(Snap myGame)
 		{
 			SwinGame.ClearScreen(Color.White);
